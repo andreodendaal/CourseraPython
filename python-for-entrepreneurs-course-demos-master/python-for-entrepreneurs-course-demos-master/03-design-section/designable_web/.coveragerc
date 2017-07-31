@@ -1,3 +1,0 @@
-[run]
-source = designable_web
-omit = designable_web/test*

@@ -1,3 +1,0 @@
-[run]
-source = blue_yellow_app
-omit = blue_yellow_app/test*
