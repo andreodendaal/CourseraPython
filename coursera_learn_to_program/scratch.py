@@ -1,6 +1,25 @@
-dna_sequence = 'AC'
+board_file = "board1.txt"
 
-print(dna_sequence[0:1])
-print(dna_sequence[1:])
+board_file = open(board_file, 'r')
 
-print(dna_sequence[1:] + dna_sequence[0:1] )
+board_list = []
+
+
+for line in board_file:
+
+    board_list_elem = []
+
+    for counter, elem in enumerate(line.strip('\n')):
+        board_list_elem.append(elem)
+
+    print(board_list_elem)
+
+    board_list.append(board_list_elem)
+
+print(board_list)
+
+board_file.close()
+
+
+
+
