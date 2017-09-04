@@ -1,25 +1,15 @@
-board_file = "board1.txt"
+def is_palindrome_v3(s):
+    """ (str) -> bool
+    Return True if and only if s is a palindrome.
+    >>> is_palindrome_v3('noon')
+    True
+    >>> is_palindrome_v3('racecar')
+    True
+    >>> is_palindrome_v3('a')
+    False
+    """
+    for i in range(len(s) // 2):
+        if s[i] != s[len(s) - i]:
+            return False
 
-board_file = open(board_file, 'r')
-
-board_list = []
-
-
-for line in board_file:
-
-    board_list_elem = []
-
-    for counter, elem in enumerate(line.strip('\n')):
-        board_list_elem.append(elem)
-
-    print(board_list_elem)
-
-    board_list.append(board_list_elem)
-
-print(board_list)
-
-board_file.close()
-
-
-
-
+    return True
