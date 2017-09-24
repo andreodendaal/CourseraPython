@@ -79,13 +79,16 @@ class Maze:
     """ A 2D maze. """
 
     # Write your Maze methods here.
-    def __init__(self, maze_list, Rat):
+    def __init__(self, maze_list, rat_1, rat_2):
 
         """
         (Maze, list of list of str, Rat, Rat) -> NoneType
 
         """
-        pass
+        self.maze_list = maze_list
+        self.rat_1 = rat_1
+        self.rat_2 = rat_2
+        self.num_sprouts_left = 10
 
     def is_wall(self, int1, int2):
 
@@ -109,11 +112,17 @@ class Maze:
         """
         pass
 
-    def ___str___(self):
+    def __str__(self):
         """
         (Maze) -> str
  
         """
-        pass
+        string_list = "#######" + '\n' + "@@@@@@@"
+        print(string_list)
+        return string_list
 
-print(Rat('P', 1, 4))
+        #return "{0} at ({1}, {2}) ate {3} sprouts".format(self.rat_1.symbol, self.rat_1.row, self.rat_1.col,
+         #                                                 self.rat_1.num_sprouts_eaten) + \
+        #       "{0} at ({1}, {2}) ate {3} sprouts".format(self.rat_1.symbol, self.rat_1.row, self.rat_1.col,
+         #                                          self.rat_1.num_sprouts_eaten)
+

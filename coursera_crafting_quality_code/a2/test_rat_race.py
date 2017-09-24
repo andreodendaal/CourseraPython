@@ -29,3 +29,13 @@ class Test_Rat(unittest.TestCase):
         self.assertEqual(expected_1, rat1.__str__())
         rat1.eat_sprout()
         self.assertEqual(expected_2, rat1.__str__())
+
+class Test_Maze(unittest.TestCase):
+
+    def test_str(self):
+        """Test get_divisors with 8 and [1, 2, 3]."""
+
+        expected = "P at (1, 4) ate 0 sprouts"
+        maze_1 = rat.Maze([], rat.Rat('P', 1, 4), rat.Rat('R', 2, 8))
+        string_fn = maze_1.__str__()
+        self.assertEqual(expected, maze_1.__str__())
